@@ -1,0 +1,97 @@
+
+format = """
+[](#3B4252)\
+[ ](bg:#3B4252)\
+$username\
+$hostname\
+[](fg:#3B4252 bg:#434C5E)\
+$directory\
+[](fg:#434C5E bg:#4C566A)\
+$git_branch\
+$git_status\
+$git_commit\
+$git_state\
+[](fg:#4C566A bg:#7CB5D4)\
+$all\
+[](fg:#7CB5D4 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$battery\
+$cmd_duration\
+[ ](fg:#33658A)\
+"""
+
+# add_newline = false
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
+
+[character]
+disabled = true
+
+# ---
+
+[username]
+style_user = 'bg:#3B4252'
+style_root = 'bg:#3B4252 fg:red'
+format = '[$user ]($style)'
+
+[hostname]
+style = 'bg:#3B4252'
+ssh_symbol = '󰒋 '
+format = '[$ssh_symbol$hostname ]($style)'
+
+# ---
+
+[directory]
+read_only = '󰌾'
+style = 'bg:#434C5E'
+format = '[ $path]($style)[$read_only ]($style)'
+
+# ---
+
+[git_branch]
+symbol = ' '
+style = 'bg:#4C566A'
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+
+[git_status]
+style = 'bg:#4C566A bold'
+format = '[($all_status$ahead_behind )]($style)'
+
+[git_commit]
+style = 'bg:#4C566A'
+format = '[\($hash$tag\) ]($style)'
+
+[git_state]
+style = 'bg:#06969A bold'
+format = '[\($state( $progress_current/$progress_total)\) ]($style)'	
+
+# ---
+
+[nodejs]
+style = 'bg:#7CB5D4 fg:#323333'
+format = '[ $symbol($version) ]($style)'
+
+# ---
+
+[docker_context]
+symbol = ' '
+style = 'bg:#06969A'
+format = '[ $symbol $context ]($style) $path'
+
+# ---
+
+[battery]
+format = '[ $symbol$percentage ]($style)'
+
+[[battery.display]]
+style = 'bg:#33658A'
+
+[cmd_duration]
+style = 'bg:#33658A'
+format = '[ 󰔛 $duration ]($style)'
+

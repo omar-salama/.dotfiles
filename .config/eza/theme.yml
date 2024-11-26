@@ -1,0 +1,42 @@
+colourful: true
+
+filekinds:
+  directory: {is_bold: false}
+  block_device: {is_bold: false}
+  char_device: {is_bold: false}
+  socket: {is_bold: false}
+  executable: {is_bold: false} # treats .mkv as executable.
+  mount_point: {is_bold: false}
+
+perms:
+  user_read: {is_bold: false}
+  user_write: {is_bold: false}
+  user_execute_file: {is_bold: false, is_underlined: false}
+  user_execute_other: {is_bold: false}
+
+size:
+  major: {is_bold: false}
+  number_byte: {is_bold: false}
+  number_kilo: {is_bold: false}
+  number_mega: {is_bold: false}
+  number_giga: {is_bold: false}
+  number_huge: {is_bold: false}
+
+users:
+  user_you: {is_bold: false}
+  group_yours: {is_bold: false}
+
+links:
+  normal: {is_bold: false}
+
+file_type:
+  video: {is_bold: false}
+  lossless: {is_bold: false}
+  crypto: {is_bold: false}
+  build: {is_bold: false}
+  source: {is_bold: false}
+
+punctuation: {is_bold: true}
+
+extensions:
+  mkv: {filename: {foreground: Purple}}

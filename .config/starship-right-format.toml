@@ -1,0 +1,104 @@
+format = """
+[](#3B4252)\
+[ ](bg:#3B4252)\
+$username\
+$hostname\
+[](fg:#3B4252 bg:#434C5E)\
+$directory\
+[](fg:#434C5E bg:#4C566A)\
+$battery\
+[ ](fg:#4C566A)\
+"""
+
+right_format = """
+[](fg:#7CB5D4)\
+$cmd_duration\
+$docker_context\
+[](fg:#06969A bg:#7CB5D4)\
+$git_branch\
+$git_status\
+$git_commit\
+$git_state\
+[](fg:#33658A bg:#06969A)\
+$all\
+[](#33658A)\
+"""
+
+# add_newline = false
+
+[line_break]
+disabled = true
+
+[character]
+disabled = true
+
+[package]
+disabled = true
+
+# ---
+
+[username]
+style_user = "bg:#3B4252"
+style_root = "bg:#3B4252 fg:red"
+format = '[$user ]($style)'
+
+[hostname]
+style = "bg:#3B4252"
+ssh_symbol = '󰒋 '
+format = '[$ssh_symbol$hostname ]($style)'
+
+# ---
+
+[directory]
+read_only = '󰌾'
+style = "bg:#434C5E"
+format = '[ $path]($style)[$read_only ]($style)'
+
+# ---
+
+[battery]
+format = '[ $symbol$percentage ]($style)'
+
+[[battery.display]]
+style = 'bg:#4C566A'
+
+# +------------+
+# | Right Side |
+# +------------+
+
+# ---
+
+[cmd_duration]
+style = 'bg:#7CB5D4 fg:#323232'
+format = '[ 󰔛 $duration ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#7CB5D4 fg:#323232"
+format = '[ $symbol $context ]($style) $path'
+
+# ---
+
+[git_branch]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+
+[git_status]
+style = "bg:#06969A"
+format = '[($all_status$ahead_behind )]($style)'
+
+[git_commit]
+style = "bg:#06969A"
+format = '[\($hash$tag\) ]($style)'
+
+[git_state]
+style = 'bg:#06969A bold'
+format = '[\($state( $progress_current/$progress_total)\) ]($style)'	
+
+
+# --- $all modules defined here
+
+[nodejs]
+style = "bg:#33658A"
+format = '[ $symbol($version)]($style)'

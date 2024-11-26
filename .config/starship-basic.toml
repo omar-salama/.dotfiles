@@ -1,0 +1,46 @@
+# Use the following for right_format
+
+###########################
+# format = """
+# $username\
+# $hostname\
+# $directory\
+# $battery\
+# $cmd_duration\
+# $character\
+# """
+
+# right_format = "$all"
+###########################
+
+### Disabled modules (in order of $all) ###
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
+
+# Comment if using right_format.
+[nodejs]
+disabled = true
+
+### Left side ###
+
+[username]
+format = '[$user]($style)'
+
+[hostname]
+format = '@[$hostname]($style) '
+
+[directory]
+style = 'bold blue'
+
+### Right side ###
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+# Uncomment if using right_format
+#[nodejs]
+#format = 'via [$symbol($version)]($style)' # Trim ending space.
