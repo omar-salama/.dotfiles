@@ -28,6 +28,7 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --level=3 --git-ignore --group-dire
 
 # --- Syntax highlighting --- (Must be at EOF)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/syntax-highlighting.zsh
 
 # --- Auto suggestion --- (Must be at EOF)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
