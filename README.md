@@ -1,6 +1,6 @@
 # Terminal Setup Guide  
 
-![Terminal Preview]([#](https://ibb.co/jbdh4zM))  
+![Terminal Preview](https://i.ibb.co/BcmLsGZ/SCR-20241126-ugim.png "This is how my terminal looks") 
 
 This guide will walk you through configuring an optimized terminal setup using various tools and plugins. Below are the components we'll be setting up, along with their official links for installation and usage instructions.  
 
